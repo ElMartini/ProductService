@@ -22,9 +22,7 @@ public class ProductController {
     public List<Product> getPersons() {
         try {
             return this.productService.getProductData();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
@@ -79,7 +77,7 @@ public class ProductController {
                 Thread.sleep(500);
 
         } while (!isSuccess);
-        log.info("Success");
+        log.info("Success1");
     }
 
     @GetMapping
