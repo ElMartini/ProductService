@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS ProductServiceDB;
+
+CREATE TABLE IF NOT EXISTS ProductServiceDB.product (
+    pID VARCHAR(255) NOT NULL PRIMARY KEY,
+    pName VARCHAR(255) NOT NULL,
+    pQuantity INT NOT NULL,
+    pPrice DOUBLE NOT NULL
+    );
+
+CREATE TABLE IF NOT EXISTS ProductServiceDB.actionStatus (
+    aid VARCHAR(255) NOT NULL PRIMARY KEY,
+    status VARCHAR(255) NOT NULL,
+    query VARCHAR(255) NOT NULL,
+    lastChange DATE NOT NULL
+    );
+
